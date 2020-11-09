@@ -37,6 +37,10 @@ Needs to be installed to run the application because all the pages connects by a
 
 Needs to be installed to run the application. It handles most of the styling with the the content.
 
+### `Backend`
+
+You find the backend startcode for the project here: https://github.com/MiaSimone/CA3-Backend.
+
 ### `The Project and the URL`
 
 You use the startcode by cloning the client project and the backend project down in a folder.
