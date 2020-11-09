@@ -1,20 +1,6 @@
 import { getElementError } from "@testing-library/react";
 import React, { useState,useEffect } from "react"
 import facadeLoginout from "./facadeLoginout";
-/*
-export default function Loginout({isLoggedIn, loginMsg, setLoginStatus}){
-  const handleBtnClick = () => {
-      setLoginStatus(!isLoggedIn);
-  };
-  return (
-      <div>
-          <h2>{loginMsg}</h2>
-          <br/>
-          <button onClick={handleBtnClick}>{loginMsg}</button>
-      </div>
-  )
-}
-*/
 
 function LogIn({ login }) {
   const init = { username: "", password: "" };
@@ -29,14 +15,18 @@ function LogIn({ login }) {
   }
  
   return (
-    <div>
-      <h2>Login</h2>
-      <form onChange={onChange} >
-        <input placeholder="User Name" id="username" />
-        <input placeholder="Password" id="password" />
-        <button onClick={performLogin}>Login</button>
-      </form>
-    </div>
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-6">
+            <h2>Login</h2>
+              <form onChange={onChange} >
+                <input placeholder="User Name" id="username" />
+                <input placeholder="Password" id="password" />
+                <button onClick={performLogin}>Login</button>
+              </form>
+          </div>
+        </div>
+      </div>
   )
  
 }
@@ -53,10 +43,14 @@ function LoggedIn() {
   }, [])
 
   return (
-    <div>
-      <h2>Data Received from server</h2>
-      <h3>{dataFromServer}</h3>
-    </div>
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-6">
+            <h2>Data Received from server</h2>
+            <h3>{dataFromServer}</h3>
+          </div>
+        </div>
+      </div>
   )
  
 }
@@ -89,17 +83,21 @@ function LoggingInOut({isLoggedIn, loginMsg, setLoginStatus}) {
   } 
 
   return (
-    <div>
-      {!isLoggedIn ? (
-      <>
-      <LogIn login={login} />
-      <p>{errorMsg}</p>
-      </>
-      ) :
-      (<div>
-        <LoggedIn />
-        <button onClick={logout}>{loginMsg}</button>
-      </div>)} 
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-9">
+          {!isLoggedIn ? (
+          <>
+          <LogIn login={login} />
+          <p>{errorMsg}</p>
+          </>
+          ) :
+          (<div>
+            <LoggedIn />
+            <button onClick={logout}>{loginMsg}</button>
+          </div>)} 
+        </div>
+      </div>
     </div>
   )
  
