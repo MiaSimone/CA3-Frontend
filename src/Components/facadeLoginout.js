@@ -24,11 +24,7 @@ function Loginout() {
         return fetch(URL + "/api/info/user", options)
             .then(handleHttpErrors);
     }
-    const fetchAdminData = () => {
-        const options = makeOptions("GET",true); //True add's the token
-        return fetch(URL + "/api/info/admin", options)
-            .then(handleHttpErrors);
-    }
+    
     const makeOptions= (method,addToken,body) =>{
     var opts = {
         method: method,
@@ -68,8 +64,7 @@ function Loginout() {
      loggedIn,
      login,
      logout,
-     fetchUserData,
-     fetchAdminData
+     fetchUserData
  }
 }
 const facadeLoginout = Loginout();

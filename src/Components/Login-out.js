@@ -36,10 +36,6 @@ function LoggedIn() {
   useEffect(() => {
     facadeLoginout.fetchUserData()
         .then(data=> setDataFromServer(data.msg))
-        
-    facadeLoginout.fetchAdminData()
-      .then(data=> setDataFromServer(data.msg))
-      
   }, [])
 
   return (

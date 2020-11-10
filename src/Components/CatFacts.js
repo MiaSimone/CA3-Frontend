@@ -18,8 +18,7 @@ export default function CatFacts() {
       getCatFact()
     }, 10000)
     return () => {
-        clearInterval(interval)
-        alert('Hov, du er på  vej væk')
+        clearInterval(interval);
     }
   }, [])
 
