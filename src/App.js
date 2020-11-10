@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
-import Component1 from "./Components/Component1";
+import CatFacts from "./Components/CatFacts";
 import Component2 from "./Components/Component2";
 import Loginout from "./Components/Login-out";
 import Home from "./Components/Home";
@@ -21,7 +21,7 @@ function Header({isLoggedIn, loginMsg}) {
     <div>
       <ul className="header">
         <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-        <li><NavLink activeClassName="selected" to="/component1">Component 1</NavLink></li>
+        <li><NavLink activeClassName="selected" to="/catfacts">Cat Facts</NavLink></li>
         {isLoggedIn && (
           <React.Fragment>
             <li><NavLink activeClassName="selected" to="/component2">Component 2</NavLink></li>
@@ -56,8 +56,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/component1">
-            <Component1 />
+          <Route path="/catfacts">
+            <CatFacts />
           </Route>
           <Route path="/component2">
             <Component2 />
