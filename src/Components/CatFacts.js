@@ -31,6 +31,7 @@ export default function CatFacts() {
             <h6>(Wait the first 10 seconds)</h6>
             <p>{JSON.stringify("Fact: " + catfactData.text)}</p>
             <p>{JSON.stringify("Created At: " + catfactData.createdAt)}</p>
+            <p>{JSON.stringify(catfactData.time)}</p>
           </div>
         </div>
       </div>
