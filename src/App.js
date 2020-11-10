@@ -6,6 +6,7 @@ import Component2 from "./Components/Component2";
 import Loginout from "./Components/Login-out";
 import Home from "./Components/Home";
 import NoMatch from "./Components/NoMatch";
+import KanyeWest from "./Components/KanyeWest";
 
 import React, {useState} from "react";
 import {
@@ -21,7 +22,9 @@ function Header({isLoggedIn, loginMsg}) {
     <div>
       <ul className="header">
         <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-        <li><NavLink activeClassName="selected" to="/catfacts">Cat Facts</NavLink></li>
+        <li><NavLink activeClassName="active" to="/catfacts">Cat Facts</NavLink></li>
+        <li><NavLink activeClassName="active" to="/kanyewest">Kanye West</NavLink></li>
+
         {isLoggedIn && (
           <React.Fragment>
             <li><NavLink activeClassName="selected" to="/component2">Component 2</NavLink></li>
@@ -58,6 +61,9 @@ function App() {
           </Route>
           <Route path="/catfacts">
             <CatFacts />
+          </Route>
+          <Route path="/kanyewest">
+            <KanyeWest />
           </Route>
           <Route path="/component2">
             <Component2 />
