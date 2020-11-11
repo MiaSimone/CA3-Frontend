@@ -15,9 +15,9 @@ function LogIn({ login }) {
   }
  
   return (
-      <div class="container mt-3">
-        <div class="row">
-          <div class="col-6">
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-6">
             <h2>Login</h2>
               <form onChange={onChange} >
                 <input placeholder="User Name" id="username" />
@@ -39,9 +39,9 @@ function LoggedIn() {
   }, [])
 
   return (
-      <div class="container mt-3">
-        <div class="row">
-          <div class="col-6">
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-6">
             <h2>Data Received from server</h2>
             <h3>{dataFromServer}</h3>
           </div>
@@ -79,9 +79,9 @@ function LoggingInOut({isLoggedIn, loginMsg, setLoginStatus}) {
   } 
 
   return (
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-9">
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-9">
           {!isLoggedIn ? (
           <>
           <LogIn login={login} />

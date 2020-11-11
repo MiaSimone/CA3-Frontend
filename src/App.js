@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 import CatFacts from "./Components/CatFacts";
-import Component2 from "./Components/Component2";
+import Weather from "./Components/Weather";
 import Loginout from "./Components/Login-out";
 import Home from "./Components/Home";
 import NoMatch from "./Components/NoMatch";
@@ -27,7 +27,7 @@ function Header({isLoggedIn, loginMsg}) {
 
         {isLoggedIn && (
           <React.Fragment>
-            <li><NavLink activeClassName="selected" to="/component2">Component 2</NavLink></li>
+            <li><NavLink activeClassName="selected" to="/weather">Weather</NavLink></li>
           </React.Fragment>
         )}
         <li><NavLink activeClassName="active" to="/login-out">{loginMsg}</NavLink></li>
@@ -65,8 +65,8 @@ function App() {
           <Route path="/kanyewest">
             <KanyeWest />
           </Route>
-          <Route path="/component2">
-            <Component2 />
+          <Route path="/weather">
+            <Weather />
           </Route>
           <Route path="/login-out">
             <Loginout 
