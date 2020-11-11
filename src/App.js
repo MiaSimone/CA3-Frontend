@@ -6,7 +6,7 @@ import Weather from "./Components/Weather";
 import Loginout from "./Components/Login-out";
 import Home from "./Components/Home";
 import NoMatch from "./Components/NoMatch";
-import KanyeWest from "./Components/KanyeWest";
+import KanyeRest from "./Components/KanyeRest";
 
 import React, {useState} from "react";
 import {
@@ -23,7 +23,7 @@ function Header({isLoggedIn, loginMsg}) {
       <ul className="header">
         <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
         <li><NavLink activeClassName="active" to="/catfacts">Cat Facts</NavLink></li>
-        <li><NavLink activeClassName="active" to="/kanyewest">Kanye West</NavLink></li>
+        <li><NavLink activeClassName="active" to="/kanyerest">Kanye Rest</NavLink></li>
 
         {isLoggedIn && (
           <React.Fragment>
@@ -62,8 +62,8 @@ function App() {
           <Route path="/catfacts">
             <CatFacts />
           </Route>
-          <Route path="/kanyewest">
-            <KanyeWest />
+          <Route path="/kanyerest">
+            <KanyeRest />
           </Route>
           <Route path="/weather">
             <Weather />

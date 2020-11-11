@@ -19,7 +19,7 @@ export default function KanyeRest() {
     return (
         <div className="container mt-3">
             <div className="row">
-                <h1>Kanye West once said....</h1>
+                <h1>Kanye (R)est once said....</h1>
                 <p>{data.quote}</p>
             </div>
         </div>
