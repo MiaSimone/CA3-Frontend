@@ -66,7 +66,7 @@ function App() {
             <KanyeRest />
           </Route>
           <Route path="/weather">
-            <Weather />
+            <Weather isLoggedIn={isLoggedIn}/>
           </Route>
           <Route path="/login-out">
             <Loginout 
