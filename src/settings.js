@@ -1,4 +1,4 @@
 
-const URL = "https://mastwo.codes/devops-starter";
+const URL = "https://mastwo.codes/ca3backend";
 
 export default URL;
