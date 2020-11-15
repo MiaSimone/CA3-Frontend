@@ -1,4 +1,4 @@
 
-const URL = "http://localhost:8080/jpareststarter";
+const URL = "https://mastwo.codes/ca3backend";
 
 export default URL;
