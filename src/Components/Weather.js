@@ -8,7 +8,7 @@ import {
 export default function Weather({isLoggedIn}) {
   const [weatherData, setWeatherData] = useState([])
   useEffect(() => {
-    fetch('https://api.weatherbit.io/v2.0/current?city=Copenhagen&country=DK&key=de4ff00ad5a24948967c5a21d3892aea')
+    fetch('https://api.weatherbit.io/v2.0/current?city=Copenhagen&country=DK&key=INSERT-API-KEY-HERE')
       .then((res) => res.json())
       .then((data) => setWeatherData(data))
       .catch((err) => console.log("Failed"))
